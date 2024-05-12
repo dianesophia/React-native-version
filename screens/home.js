@@ -11,7 +11,7 @@ const Home = ({ route, navigation }) => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await fetch("http://localhost:4321/students");
+        const response = await fetch("http://localhost:5432/students");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -27,7 +27,7 @@ const Home = ({ route, navigation }) => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:4321/students/${selectedStudent.id}`, {
+      const response = await fetch(`http://localhost:5432/students/${selectedStudent.id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
@@ -51,10 +51,12 @@ const Home = ({ route, navigation }) => {
   const closeModal = () => {
     setModal(false);
   }
-
-  const handleAddStudent = (newStudent) => {
+{
+/*  const handleAddStudent = (newStudent) => {
     setStudents(prevStudents => [...prevStudents, newStudent]);
   };
+*/}
+
 
   const handleUpdateStudent = (updatedStudent) => {
     // Update the student list with the updated student data
