@@ -119,19 +119,7 @@ const Home = ({ route, navigation }) => {
                   <TouchableOpacity onPress={() => handleDelete()} style={styles.modalButton}>
                     <Text style={styles.buttonText}>Delete</Text>
                   </TouchableOpacity>
-                  <TouchableOpacity  
-                      onPress={() => {
-                        navigation.navigate("Update Page", { 
-                          studentId: selectedStudent.idno, // Pass studentId instead of id
-                          handleUpdateStudent,
-                          selectedStudentData: selectedStudent // Pass the selected student's data
-                        });
-                          closeModal(); // Close the modal
-                      }}
-                      style={styles.modalButton}
-                  >
-                      <Text style={styles.buttonText}>Update</Text>
-                  </TouchableOpacity>
+                
 
 
 
@@ -145,9 +133,7 @@ const Home = ({ route, navigation }) => {
 
       </View>
 
-      <TouchableOpacity style={styles.addBtn} onPress={() => navigation.navigate("Add Page", { handleAddStudent })}>
-        <Text style={styles.addText}> + ADD </Text>
-      </TouchableOpacity>
+      
     </View>
   );
 };
@@ -186,14 +172,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
   },
   modalContent: {
     backgroundColor: 'white',
     padding: 20,
     borderRadius: 10,
-    width: '80%', // Set the width to 80% of the screen width
-    alignSelf: 'center', // Center the modal horizontally
+    width: '80%', 
+    alignSelf: 'center', 
   },
   modalButtonsContainer: {
     flexDirection: 'row',
